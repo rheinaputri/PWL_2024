@@ -89,3 +89,11 @@ Route::resource('photo', PhotoController::class);
 //     'create', 'store', 'update', 'destroy'
 // ]);
 
+// PRAKTIKUM 3 - langkah 1
+Route::get('/greeting', function (){
+    return view('blog.hello', ['name' => 'Rheina']);
+});
+
+// Prak3 - langkah 9
+Route::get('/greeting', [WelcomeController::class,'greeting']);
+
