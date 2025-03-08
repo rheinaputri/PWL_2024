@@ -8,8 +8,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\SalesController;
 
 Route::get('/', [HomeController::class, 'index']);
-// // tambahan
-// Route::get('/user/profile', [UserController::class, 'profile']);
 
 Route::prefix('category')->group(function () {
     Route::get('/food-beverage', [ProductController::class, 'foodBeverage']);
@@ -18,7 +16,6 @@ Route::prefix('category')->group(function () {
     Route::get('/baby-kid', [ProductController::class, 'babyKid']);
 });
 
-Route::get('/user/{id}/name/{name}', [UserController::class, 'show']);
-
-Route::get('/sales', [SalesController::class, 'index']);
+Route::get('/user/{id}/name/{name}', [UserController::class, 'profile']);
+Route::get('/sales/index', [SalesController::class, 'index']);
 
